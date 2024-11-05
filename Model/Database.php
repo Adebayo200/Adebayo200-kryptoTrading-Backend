@@ -1,9 +1,9 @@
 <?php
  class Database
  {
-    private $user ="root";
-    private $pws = "";
-    private $DNS = "mysql:host=localhost;dbname=kryptotrading";
+    private $user ="kryptot7_krypto";
+    private $pws = "krypto123$";
+    private $DNS = "mysql:host=wghp11.wghservers.com;dbname=kryptot7_kryptotrading";
     
     public $con = null;
 
@@ -15,4 +15,4 @@
          echo "Error: in connection";
        }
     }
- }    
+ }  
