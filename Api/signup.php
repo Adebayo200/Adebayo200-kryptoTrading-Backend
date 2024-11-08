@@ -5,13 +5,7 @@
  header("Content-Type: application/json");
  header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Method,Authorization, X-Requested-With"); 
  
- require 'Mail_sender/PHPMailer/src/PHPMailer.php';
- require 'Mail_sender/PHPMailer/src/SMTP.php';
-
- use PHPMailer\PHPMailer\PHPMailer;
- use PHPMailer\PHPMailer\SMTP;
- 
-//  Config file
+//  script
  require 'Mail_sender/script.php';
 
  require_once("../auto_loader.php");
