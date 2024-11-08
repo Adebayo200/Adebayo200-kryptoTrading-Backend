@@ -5,11 +5,9 @@
  header("Content-Type: application/json");
  header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Method,Authorization, X-Requested-With"); 
  
- require 'Mail_sender/PHPMailer/src/Exception.php';
  require 'Mail_sender/PHPMailer/src/PHPMailer.php';
  require 'Mail_sender/PHPMailer/src/SMTP.php';
 
- use PHPMailer\PHPMailer\Exception;
  use PHPMailer\PHPMailer\PHPMailer;
  use PHPMailer\PHPMailer\SMTP;
  
