@@ -73,6 +73,28 @@
         }
     }
 
+    public function verify($email)
+    {
+        $this->email = $email;
+         
+        $sql = "UPDATE user SET verified =:vry WHERE email=:email";
+
+        $stmt = $this->dbc_obj->con->prepare($sql);
+
+         $result = $stmt->execute(['email'=>$email,'vry'=>1]);
+
+        if($result)
+        {
+            return ['status'=>true,'message'=>'Operation successful'];
+            exit();
+        }
+        else
+        {
+            return ['status'=>false,'message'=>'Operation not successful'];
+            exit();
+        }
+    }
+
     public function update_password($id,$current_password,$new_password):array
     {
 
@@ -103,4 +125,6 @@
        
     }
 
+
+    
 }
