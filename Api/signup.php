@@ -24,7 +24,7 @@
 
  if($auth['status'])
  {   
-    sendMail($data->email,"Account verification","New message");
+    sendMail($data->email,"Account verification","New message from krypto trading");
     echo json_encode(['status'=>true,'message'=>$auth['message']]);
  }
  else

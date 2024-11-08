@@ -5,7 +5,7 @@
  header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Method,Authorization, X-Requested-With"); 
  header("Content-Type: application/json");
 
- require_once("../../auto_loader.php");
+ require_once("../auto_loader.php");
 
  //Instantiate Database & connect
  $Db = new Database();
