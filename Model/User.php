@@ -73,6 +73,25 @@
         }
     }
 
+    public function user_by_email($email):array
+    {
+        $sql = "SELECT * FROM user WHERE email=:email";
+        $stmt = $this->dbc_obj->con->prepare($sql);
+        $stmt->execute(['email'=>$email]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row_count = $stmt->rowCount();
+        if($row_count > 0)
+        {
+            return ['status'=>true,'data'=>$result,'message'=>'Operation successful'];
+            exit();
+        }
+        else
+        {
+            return ['status'=>false,'data'=>[],'message'=>'Operation not successful'];
+            exit();
+        }
+    }
+
     public function verify($email)
     {
         $this->email = $email;

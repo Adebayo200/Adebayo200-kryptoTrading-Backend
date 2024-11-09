@@ -55,7 +55,7 @@
          $this->email = $email;
          $this->username = $username;
          $this->pwd = $pwd;
-         $this->pwd_token = md5(mt_rand(0,1000000));
+         $this->pwd_token = substr(md5(mt_rand(0,1000000)),0,7);
 
          if($this->invalid_email() === false)
          {
