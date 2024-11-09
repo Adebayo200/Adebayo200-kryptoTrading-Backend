@@ -22,17 +22,17 @@
     if($result['status'])
     {
         $token = $result['data']['pwd_token'];
-        $message = "<div style='border: 1px solid rgba(0, 0, 0, 0.336);font-family: sans-serif;max-width: 400px;margin: auto; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);border-radius:  0 0 8px 8px;'>
+        $message = "<div style='border: 1px solid rgba(0, 0, 0, 0.336);font-family: sans-serif;max-width: 400px;margin: auto; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);border-radius:8px;'>
                         <div style='padding:15px 10px; background-color:blue;color:white;text-align: center;border-radius: 8px 8px 0 0;'>
                             <h2 style='margin: 0;'>KRYPTO TRADING</h2>
                         </div>
                         <div style='padding:10px'>
                         <p style='margin:5px 0;font-size: 14px;color: rgba(0, 0, 0, 0.699);'>Hello, please use the phrase below to recover your password</p>
-                        <h3>$token</h3>
+                        <h2 style='text-align:center;color:blue'>$token</h2>
                         </div>
                     </div>";
 
-        sendMail($data->email,"Account verification",$message);
+        sendMail($data->email,"Password Recovery",$message);
         echo json_encode(['status'=>true,'data'=>$result['data'],'message'=>'Operation successful']);
     }
     else 

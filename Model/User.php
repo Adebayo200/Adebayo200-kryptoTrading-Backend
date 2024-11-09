@@ -144,6 +144,38 @@
        
     }
 
+    public function recover_password($email,$token,$new_password):array
+    {
+
+        $sql = "select * from user where email = :email && pwd_token = :token";
+        $stmt = $this->dbc_obj->con->prepare($sql);
+        $stmt->execute(['email'=>$email,'token'=>$token]);
+ 
+        $row_count = $stmt->rowCount();
+        if($row_count <= 0 )
+        {
+            return ['status'=>false,'message'=>'Operation not successful: Invalid token'];
+            exit();
+        }
+
+         $new_token = substr(md5(mt_rand(0,1000000)),0,10);
+         
+         $sql = "UPDATE user SET pwd = :pwd, pwd_token=:pwd_t WHERE email = :email";
+         $stmt = $this->dbc_obj->con->prepare($sql);
+         $result = $stmt->execute(['email'=>$email,'pwd'=>$new_password,'pwd_t'=>$new_token]);
+         if($result)
+         {
+            return ['status'=>true,'message'=>'Operation successful'];
+            exit();
+         }
+         else
+         {
+            return ['status'=>false,'message'=>'Operation not successful'];
+            exit();
+         }
+       
+    }
+
 
     
 }
