@@ -176,6 +176,24 @@
        
     }
 
+    public function delete($id):array
+    {
+        $sql = "DELETE FROM user WHERE id=:id";
+        $stmt = $this->dbc_obj->con->prepare($sql);
+        $result = $stmt->execute(['id'=>$id]);
+        
+        if($result)
+        {
+            return ['status'=>true,'message'=>'Operation successful'];
+            exit();
+        }
+        else
+        {
+            return ['status'=>false,'message'=>'Operation not successful'];
+            exit();
+        }
+    }
+
 
     
 }

@@ -19,11 +19,11 @@
 
     if($result['status'])
     {
-        echo json_encode(['status'=>true,'data'=>$result['data'],'message'=>'Operation successful']);
+        echo json_encode(['status'=>true,'message'=>'Operation successful']);
     }
     else 
     {
-        echo json_encode(['status'=>false,'data'=>[],'message'=>$result['message']]);
+        echo json_encode(['status'=>false,'message'=>$result['message']]);
     }
 
 
