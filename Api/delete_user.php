@@ -1,9 +1,9 @@
 <?php
 //API Headers
  header("Access-Control-Allow-Origin: *");
-//  header("Access-Control-Allow-Method: GET");
-//  header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Method,Authorization, X-Requested-With"); 
-//  header("Content-Type: application/json");
+ header("Access-Control-Allow-Method: GET");
+ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Method,Authorization, X-Requested-With"); 
+ header("Content-Type: application/json");
 
  require_once("../auto_loader.php");
     
