@@ -3,11 +3,12 @@
 define('MAILHOST',"smtp.gmail.com");
 
 // recepient email
-define('USERNAME',"tik.eskanor@gmail.com");
+define('USERNAME',"");
 
 // App password from google
-define('PASSWORD',"fclf sbpx lbug myxe");
-
+define('PASSWORD',"");
+// tik.eskanor@gmail.com
+// fclf sbpx lbug myxe
 // Sender
 define('SEND_FROM',"kryptotrade@kryptotradingbackend.com.ng");
 
