@@ -6,7 +6,7 @@ define('MAILHOST',"smtp.gmail.com");
 define('USERNAME',"kryptotrade.kt@gmail.com");
 
 // App password from google
-define('PASSWORD',"mlsw gzxx uuot ezwu ");
+define('PASSWORD',"mlsw gzxx uuot ezwu");
 
 // Sender
 define('SEND_FROM',"kryptotrade@kryptotradingbackend.com.ng");
